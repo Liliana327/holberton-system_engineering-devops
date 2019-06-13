@@ -1,2 +1,2 @@
 #!/bin/bash
-chod utx hello
+chmod u+x hello
