@@ -1,2 +1,2 @@
 #!/bin/bash
-fmt "Hola,Mundo" 
+fmt "Hola,Mundo" /n 
