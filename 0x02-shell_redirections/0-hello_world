@@ -1,2 +1,2 @@
 #!/bin/bash
-ls> Hola,Mundo
+echo  Hola,Mundo >/n
