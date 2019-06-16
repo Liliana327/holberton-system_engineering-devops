@@ -1,2 +1,2 @@
 #!/bin/bash
-fmt "Hola,Mundo" /n 
+cat Hola,Mundo pr
