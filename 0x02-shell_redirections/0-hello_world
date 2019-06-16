@@ -1,2 +1,2 @@
 #!/bin/bash
-lpr "Hola,Mundo" cat
+lpr <Hola,Mundo
