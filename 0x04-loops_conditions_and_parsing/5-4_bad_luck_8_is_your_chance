@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# This script is displaying "Holberton School" 10 times
+
+item=1
+
+while [[ $item -le 10 ]]; do
+	if [[ $item -eq 4 ]]; then
+		echo "bad luck"
+	elif [[ $item -eq 8 ]]; then
+		echo "good luck"
+	else echo "Holberton School"
+	fi
+	let item+=1
+done
