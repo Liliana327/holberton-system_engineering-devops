@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# This script is displaying "Holberton School" 10 times
+
+item=1
+
+while (( $item <= 10 )); do
+    if (( $item == 10 )); then
+        echo "Hi"
+    fi
+    echo "Holberton School"
+    let item+=1
+done
