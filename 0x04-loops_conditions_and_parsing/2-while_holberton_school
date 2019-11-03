@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script is displaying "Holberton School" 10 times
+
+	string=0
+	while [ $string -lt 10 ]
+	do
+		echo "Holberton School"
+		string=$((string + 1))
+	done
