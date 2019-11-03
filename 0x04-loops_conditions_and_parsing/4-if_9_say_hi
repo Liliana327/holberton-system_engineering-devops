@@ -3,8 +3,8 @@
 
 item=1
 
-while (( $item <= 10 )); do
-	if (( $item == 10 )); then
+while [[ $item -le 10 ]]; do
+	if [[ $item -eq 10 ]]; then
 		echo "Hi"
 	fi
 	echo "Holberton School"
