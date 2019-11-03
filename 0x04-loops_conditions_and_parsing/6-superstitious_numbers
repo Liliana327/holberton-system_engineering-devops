@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # This script is displaying "Holberton School" 10 times
 
-clear
 item=1;
 
 while [[ $item -le 20 ]]; do
