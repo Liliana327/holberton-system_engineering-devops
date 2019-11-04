@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
 #script that displays a list of currently running processes
 #shellcheck disable=SC2009
+<<<<<<< HEAD
 ps axuf | grep bash
+=======
+ps axuf  --user $$
+>>>>>>> 28f8451b88a609bb51d4bd2459e06b3a534866a3
