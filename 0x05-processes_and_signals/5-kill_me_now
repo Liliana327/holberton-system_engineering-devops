@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#script that displays a list of currently running processes
+kill -SIGTERM "$(pgrep -f 4-to_infinity_and_beyond)"
