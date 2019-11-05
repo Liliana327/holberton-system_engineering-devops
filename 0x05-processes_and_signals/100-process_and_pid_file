@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#script that Create and Deletes the file holbertonscript.pid
+
+sudo touch /var/run/holbertonscript.pid
+sudo bash -c 'echo $$ > /var/run/holbertonscript.pid'
+trap "echo Y U no love me?!" SIGINT
+trap "echo I hate the kill command; sudo rm /var/run/holbertonscript.pid; exit" SIGTERM
+trap "sudo rm /var/run/holbertonscript.pid; exit" SIGQUIT
+while :
+do
+	echo 'To infinity and beyond'
+	sleep 2
+done
+
