@@ -1,7 +1,5 @@
 # Using Puppet, create a file in /tmp.
-file 
-
-{ '/tmp/holberton':
+file { '/tmp/holberton':
   path         => '/tmp/holberton',
   permission   => '0744',
   owner        => 'www-data',
