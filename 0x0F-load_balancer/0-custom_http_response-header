@@ -3,6 +3,5 @@
 sudo apt-get update
 sudo apt-get install nginx -y
 var HEADER = "add_header X-Served-By $HOSTNAME;"
-sudo sed -i "46i\ $HEADER" /etc/nginx/sites-enabled/default
-sudo service nginx reload
-sudo service nginx restart
+sed -i "46i\ $HEADER" /etc/nginx/sites-enabled/default
+service nginx restart
