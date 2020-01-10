@@ -2,6 +2,7 @@
 #Double the number of webservers
 sudo apt-get update
 sudo apt-get install nginx -y
-HEADER="add_header X-Served-By $HOSTNAME;"
-sed -i "46i $HEADER" etc/nginx/sites-available/default
-service nginx restart
+HEADER="\t\tadd_header X-Served-By '$HOSTNAME';"
+sudo sed -i "46i\ $HEADER" /etc/nginx/sites-enabled/default
+sudo service nginx reload
+sudo service nginx restart
