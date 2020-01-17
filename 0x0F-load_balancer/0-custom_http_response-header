@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
-#Double the number of webservers
-sudo apt-get update
-sudo apt-get install nginx -y
-HEADER="add_header X-Served-By '$HOSTNAME';"
-sudo sed -i "46i\ $HEADER" /etc/nginx/sites-enabled/default
-sudo service nginx reload
-sudo service nginx restart
+# server so that /redirect_me is redirecting to another page
+
+apt-get update
+apt-get -y install nginx
+echo "Holberton School" > /var/www/html/index.html
+sed -i '/listen 80 default_server;/a rewrite ^/redirect_me https://www.youtube.com/watch?v=91I8sSLrEok permanent;' /etc/nginx/sites-available/default
+echo "Ceci n'est pas une page" > /var/www/html/404.html
+sed -i '/server_name _;/a error_page 404 /404.html;\nlocation = /404.html {\nroot /var/www/html;\ninternal;\n}' /etc/nginx/sites-available/default
+sed -i "/server_name _;/a add_header X-Served-By \$hostname;" /etc/nginx/sites-available/default
+service nginx restart
