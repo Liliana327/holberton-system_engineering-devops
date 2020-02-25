@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# 0x0E. Web stack debugging #1
+
+ln -s -f /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx restart
+pkill -sigkill -f "/usr/sbin/nginx"
